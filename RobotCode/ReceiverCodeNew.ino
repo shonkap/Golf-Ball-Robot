@@ -1,6 +1,9 @@
 #include <EnableInterrupt.h>
 //#include <Servo.h> 
 
+//all reciever code was take from Ryan Boland
+//Has alot more info on this site: https://ryanboland.com/blog/reading-rc-receiver-values/
+
 #define SERIAL_PORT_SPEED 57600
 #define RC_NUM_CHANNELS  5
 
@@ -222,9 +225,6 @@ void drives(){
     //Serial.print("throttle: ");Serial.print(throttle);Serial.print(" \t");
     //Serial.print("xvalue: ");Serial.print(rc_values[RC_CH4]);Serial.print(" \t");
     //Serial.print("yvalue: ");Serial.print(yvalue);Serial.print(" \t");
-
-  //you can re-add this ******
-  //noInterrupts();
   
   if(throttle < 10)
   {
